@@ -288,14 +288,29 @@ curl --location 'http://localhost:8080/orders/' \
 
 #### GET - http://localhost:8080/orders/{ID}
 Busca um pedido pelo ID passando o mesmo por parametro na URL
+CURL
+
+```bash
+curl --location 'http://localhost:8080/orders/1'
+```
 
 #### GET - http://localhost:8080/orders
 Busca todos os pedidos feitos
 
+```bash
+curl --location 'http://localhost:8080/orders'
+```
+
 #### GET - http://localhost:8080/orders?date=2023-01-01T00:00:00Z
 Busca pedidos feitos nessa data (Data informada por parametro na URL)
+
+```bash
+curl --location 'http://localhost:8080/orders?date=2023-11-17T23%3A13%3A56Z'
+```
 
 #### DELETE - http://localhost:8080/orders/{ID}
 Deleção feita atraves do ID informado atraves da URL
 
-
+```bash
+curl --location --request DELETE 'http://localhost:8080/orders/1'
+```
