@@ -6,8 +6,6 @@ Formatos de Requisição e Resposta: A API aceita requisições nos formatos JSO
 
 Observações: O CORS está implementado na funcionalidade, aceitando as ORIGINs http://localhost:3000, http://localhost:8080 e https://eicon.com.br. Para testar requisições via XML ou JSON, adicione no cabeçalho (Headers) a chave "Accept" com o valor "application/json" ou "application/xml".
 
----
-
 ## 📢 Funcionalidades
 
 - [x] Cadastrar um novo cliente.
