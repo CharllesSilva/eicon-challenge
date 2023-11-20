@@ -1,0 +1,33 @@
+version: '3'
+
+services:
+  db:
+    image: mysql:5.7
+    container_name: db
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: challenge_api
+      MYSQL_PASSWORD: root
+    networks:
+      - challenge-network
+    ports:
+      - "3306:3306"
+    volumes:
+      - .docker/mysql:/var/lib/mysql
+
+  challenge-api:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: challenge-api
+    ports:
+      - "8080:8080"
+    networks:
+      - challenge-network
+    depends_on:
+      - db
+
+networks:
+  challenge-network:
+    driver: bridge
