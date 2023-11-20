@@ -23,6 +23,9 @@ Observações: O CORS está implementado na funcionalidade, aceitando as ORIGINs
 Ao criar clientes, a funcionalidade não aceita números de controle duplicados. Para atualização, o ID do cliente deve existir previamente.
 
 Para atualizar um produto, é necessário que ele exista anteriormente.
+Caso a data de cadastro não seja enviada o sistema vai assumir a data atual
+Caso a quantidade de produtos não for informada, a funcionalidade vai considerar 1.
+Caso a quantidade seja maior que 5 o sistema vai aplicar 5% de desconto no valor total, para quantidades a partir de 10 aplica 10% de desconto no valor total.
 
 Ao criar um pedido (order), tanto o cliente quanto os produtos devem existir previamente. A funcionalidade não permite mais de 10 itens por pedido. Para buscar por ID ou data, o pedido deve existir antes, e deve conter pelo menos um produto nos itens.
 
